@@ -31,7 +31,7 @@ app.post("/",(req,res)=>{
 
             const weather = JSON.parse(data);
 
-            const temp = (weather.main.temp) - 273;
+            const temp =Math.round((weather.main.temp) - 273);
             // temp = temp - 273.15;
             const icon = weather.weather[0].icon;
             const imgUrl = "https://openweathermap.org/img/wn/"+ icon+"@2x.png";
